@@ -1,0 +1,238 @@
+    /* Main color variables */
+    :root {
+        --primary-light: #cfe2ff;
+        --primary-very-light: #ebf2ff;
+        --secondary-color: #6c757d;
+        --success-color: #198754;
+        --warning-color: #ffc107;
+        --danger-color: #dc3545;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --body-bg: #f6f8fc;
+        --white: #ffffff;
+    }
+
+    /* General styles */
+    body {
+        background-color: var(--body-bg);
+        font-family: 'Roboto', 'Segoe UI', sans-serif;
+        color: var(--dark-color);
+    }
+
+    .page-container {
+        padding: 2rem 1rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    /* Cards and sections */
+    .card {
+        border: none;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        box-shadow: 0 10px 20px rgba(13, 110, 253, 0.1) !important;
+    }
+
+    .card-header {
+        padding: 1rem 1.5rem;
+        font-weight: 500;
+    }
+
+    .welcome-card {
+        background-color: var(--primary-very-light);
+        border-left: 5px solid var(--primary-color);
+    }
+
+    .section-card {
+        margin-bottom: 1.5rem;
+    }
+
+    /* Book cards */
+    .book-card {
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .book-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 15px rgba(13, 110, 253, 0.15) !important;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: var(--primary-dark);
+        border-color: var(--primary-dark);
+    }
+
+    .btn-outline-primary {
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-outline-primary:hover {
+        background-color: var(--primary-color);
+        color: var(--white);
+    }
+
+    .btn-success {
+        background-color: var(--success-color);
+        border-color: var(--success-color);
+    }
+
+    .filter-btn {
+        background-color: var(--white);
+        color: var(--primary-color);
+        border: 1px solid rgba(13, 110, 253, 0.2);
+        border-radius: 0.5rem;
+        padding: 0.5rem 1rem;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background-color: var(--primary-very-light);
+        color: var(--primary-dark);
+    }
+
+    /* Alerts */
+    .alert {
+        border-radius: 0.75rem;
+        border: none;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .alert-info {
+        background-color: #d1ecf1;
+        color: #0c5460;
+    }
+
+    /* Badges */
+    .badge {
+        padding: 0.5em 0.8em;
+        font-weight: 500;
+        border-radius: 0.5rem;
+    }
+
+    .bg-primary {
+        background-color: var(--primary-color) !important;
+    }
+
+    .bg-success {
+        background-color: var(--success-color) !important;
+    }
+
+    .bg-warning {
+        background-color: var(--warning-color) !important;
+    }
+
+    .text-primary {
+        color: var(--primary-color) !important;
+    }
+
+    /* List groups */
+    .list-group-item {
+        padding: 1rem 1.25rem;
+        transition: all 0.2s ease;
+    }
+
+    .list-group-item:hover {
+        background-color: var(--primary-very-light);
+    }
+
+    /* Animations */
+    .fade-in {
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    .slide-up {
+        animation: slideUp 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    /* Utility classes */
+    .shadow-sm {
+        box-shadow: 0 0.125rem 0.25rem rgba(13, 110, 253, 0.1) !important;
+    }
+
+    /* Icons */
+    .fas {
+        color: var(--primary-color);
+    }
+
+    .text-muted .fas {
+        color: var(--secondary-color);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .card-body {
+            padding: 1rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+        }
+    }
+
+    /* Cart empty state */
+    .text-center.py-5 {
+        padding: 3rem 0;
+    }
+
+    .text-center.py-5 .fas {
+        color: var(--secondary-color);
+    }
+
+    /* Recently viewed section */
+    .card-header.bg-light {
+        background-color: var(--primary-very-light) !important;
+        color: var(--primary-dark);
+    }
